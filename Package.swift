@@ -23,12 +23,12 @@ let systemLibraries: [Target] = [
 #endif
 
 let package = Package(
-    name: "GraphViz",
+    name: "Graphviz-SwiftInterface",
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "GraphViz",
-            targets: ["GraphViz"]),
+            name: "Graphviz-SwiftInterface",
+            targets: ["Graphviz-SwiftInterface"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -36,10 +36,10 @@ let package = Package(
     ],
     targets: systemLibraries + [
         .target(
-            name: "GraphViz",
+            name: "Graphviz-SwiftInterface",
             dependencies: ["Clibgraphviz"]),
         .testTarget(
             name: "GraphVizTests",
-            dependencies: ["GraphViz"]),
+            dependencies: ["Graphviz-SwiftInterface"]),
     ]
 )
